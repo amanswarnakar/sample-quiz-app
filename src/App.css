@@ -1,38 +1,80 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #f2c5c5;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  color: rgb(189, 52, 61);
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  word-spacing: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container {
+  height: 30%;
+  max-height: 600px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  margin: 100px auto;
+  border-radius: 10px;
+  padding: 50px 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress-bar {
+  min-width: 100%;
+}
+
+.ques-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ques-text {
+  font-size: 2rem;
+  height: 200px;
+}
+
+.curr-ques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.slider {
+  font-size: 2rem;
+  width: 75%;
+  margin: 30px auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-container {
+  bottom: 0;
+  width: 100%;
+}
+.footer {
+  color: rgb(135, 121, 121);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
