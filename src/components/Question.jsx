@@ -20,12 +20,26 @@ const Question = ({
       <div className="ques-text">{question}</div>
       <Slider value={value} changeValue={changeValue} />
       <div className="buttons">
-        <Button variant="text" onClick={handlePrev}>
-          <ChevronLeftIcon /> Prev
-        </Button>
-        <Button variant="text" onClick={handleNext}>
-          Next <ChevronRightIcon />
-        </Button>
+        {currQues !== 1 && (
+          <Button variant="text" onClick={handlePrev}>
+            <ChevronLeftIcon /> Prev
+          </Button>
+        )}
+        {currQues === 1 && (
+          <Button disabled variant="text" onClick={handlePrev}>
+            <ChevronLeftIcon /> Prev
+          </Button>
+        )}
+        {currQues !== totalQues && (
+          <Button variant="text" onClick={handleNext}>
+            Next <ChevronRightIcon />
+          </Button>
+        )}
+        {currQues === totalQues && (
+          <Button disabled variant="text" onClick={handleNext}>
+            Next <ChevronRightIcon />
+          </Button>
+        )}
       </div>
     </div>
   );
